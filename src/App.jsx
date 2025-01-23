@@ -1,5 +1,7 @@
 import ksbs from './data/ksbs.json'
 
+/**
+// Original
 function App() {
   return (
     <ul>
@@ -10,6 +12,18 @@ function App() {
         </li>
       ))}
     </ul>
+  )
+}
+
+export default App
+*/
+
+function App() {
+  const listKsbs = ksbs.map(ksb =>
+    <li> Code: {ksb.Code}</li>
+  );
+  return (
+    <ul>{listKsbs}</ul>
   )
 }
 
